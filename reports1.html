@@ -1,0 +1,284 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+	* {
+		margin: 0px;
+		padding: 0px;
+
+	}
+
+	.table-responsive {
+		background-color: #fff;
+	}
+
+	select.position {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-indent: 1px;
+		text-overflow: '';
+	}
+
+	/*   ul li
+          {
+            list-style: none;
+            font-size: 13px;
+          }*/
+</style>
+<div class="Content_Bg pb-5">
+	<div class="container ">
+		<br><br>
+		<h4 class="text-center" style="font-weight: bold;">Mid-Term Marksheet</h4>
+		<br>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<div class="alert alert-dismissible bg-info text-white">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+					</div>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<div class="alert alert-dismissible bg-info text-white">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+					</div>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+		<br>
+		<div class="Bg_Input_Box Text_color pr-3 pl-3 pt-5 pb-5">
+			<div class="row">
+				<div class="col-6">
+					<button class="btn Bg_Btn sbtn float-right" onclick="pre()"><i class="fa fa-chevron-left p-2"></i>Prev</button>
+				</div>
+				<div class="col-6">
+					<button class="btn Bg_Btn sbtn" onclick="next()">Next<i class="fa fa-chevron-right p-2"></i></button>
+				</div>
+				&nbsp;
+			</div>
+			<div class="row mb-2">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4">
+					<label for="session">SID</label>
+					<input type="number" min="1" name="Student_Id" class="form-control form-control-sm stid" id="stid" style="height:26px;">
+				</div>
+				<div class="col-md-2 d-none">
+					<label for="session">Class</label>
+					<select class="form-control form-control-sm cl_id" name="cl_id" id="cls" style="height:26px;">
+						<option disabled selected value>--SELECT--</option>
+							<option value=""></option>
+					</select>
+				</div>
+				<div class="col-md-2 d-none">
+					<label>Section</label>
+					<select class="form-control form-control-sm " name="cl_id" id="section" style="height:26px;">
+						<option disabled selected value>--SELECT--</option>
+
+					</select>
+				</div>
+				<div class="col-md-2">
+					<label for="session">Session</label>
+					<select class="form-control form-control-sm ses_name" name="ses_name" style="height:26px;" required>
+						<option disabled selected value>--SELECT--</option>
+							<option value=""></option>
+					</select>
+				</div>
+				<div class="col-md-2">
+					<label for="session">Attd:</label>
+					<select class="form-control form-control-sm atdnce" style="height:26px;">
+						<option disabled selected value>--SELECT--</option>
+						<option value="software">Software</option>
+						<option value="edited">Edited</option>
+					</select>
+				</div>
+			</div>
+			<div class="row mb-2">
+				<div class="col-md-4">
+					<label for="sid">SID</label>
+					<input type="number" name="Student_Id" class="form-control form-control-sm sssid" id="sssid" readonly style="height:26px;">
+				</div>
+				<div class="col-md-4">
+					<label for="stdname">Student Name</label>
+					<input type="text" name="Std_name" class="form-control form-control-sm Candidate_name ssname" id="Candidate_name" required style="height:26px;">
+				</div>
+				<div class="col-md-4">
+					<label for="sid">Father Name</label>
+					<input type="text" name="Father_name" class="form-control form-control-sm fname" id="fname" readonly style="height:26px;">
+				</div>
+			</div>
+			<div class="row mb-2">
+				<div class="col-md-4">
+					<label for="stdname">Class</label>
+					<input type="text" name="class" class="form-control form-control-sm cl" id="cl" readonly style="height:26px;">
+				</div>
+				<div class="col-md-4">
+					<label for="sid">Section</label>
+					<input type="text" name="Sec" class="form-control form-control-sm sec" id="sec" readonly style="height:26px;">
+				</div>
+				<div class="col-md-4">
+					<label for="sid">Cast</label>
+					<input type="text" name="surename" class="form-control form-control-sm surename" id="surename" readonly style="height:26px;">
+					<input type="hidden" name="cid" class="form-control form-control-sm cid" id="cid" style="height:26px;">
+				</div>
+			</div>
+
+
+			<br>
+			<div class="row">
+				<div class="col-lg-12">
+					<br>
+					<table class="m-auto table-responsive table-bordered " style="background-color: #298490; ">
+						<tbody style="width:100%">
+							<tr>
+								<th class="p-2" rowspan="2">S.NO</th>
+								<th class="p-2" rowspan="2" style="width: 25%">Subjects</th>
+								<th class="p-2" rowspan="2">Max Marks</th>
+								<th class="p-2" rowspan="2">Min Marks</th>
+								<th class="p-2 text-center" colspan="3" style="width: 46%">Marks Obtained</th>
+								<th class="p-2" rowspan="2">Remarks</th>
+							</tr>
+							<tr>
+								<th class="p-2">Reading / Writing</th>
+								<th class="p-2">Mid-Term</th>
+								<th class="p-2">Final-Term</th>
+							</tr>
+							<tr>
+								<td class="subjid"></td>
+								<td class="subj"></td>
+								<td class="max"></td>
+								<td class="min"></td>
+								<td class="wr"></td>
+								<td class="obt"></td>
+								<td class="fn"></td>
+								<td class="ps"></td>
+
+							</tr>
+							<tr>
+								<td></td>
+								<td>Total</td>
+								<td class="maxt"></td>
+								<td class="mint"></td>
+								<td class="wrt"></td>
+								<td class="obtt"></td>
+								<td class="fnt"></td>
+								<td class=""></td>
+
+							</tr>
+						</tbody>
+					</table><br>
+					<table style="text-align: center;background-color: #298490;" class="table-responsive table-bordered">
+						<tr>
+							<td style="width: 21%;">
+								<h5><b style="color: white;">GRADE CODE</b></h5>
+							</td>
+							<td style="font-size: 13px;width: 14%;">80% above A1<br>(Excellent)</td>
+							<td style="font-size: 13px;width: 14%;">70% to 79% A<br>(Very Good)</td>
+							<td style="font-size: 13px;width: 14%;">60% to 69% B<br>(Good)</td>
+							<td style="font-size: 13px;width: 14%;">50% to 59% C<br>(Fair)</td>
+							<td style="font-size: 13px;width: 14%;">40% to 49% D<br>(Un Satisfactory)</td>
+							<td style="font-size: 13px;width: 14%; border-right: none;">Below 40% Fail<br>(Fail)</td>
+						</tr>
+					</table><br>
+					<table style="text-align: center; " class="table-reponsive table-bordered">
+						<tr>
+							<td>Percentage:&nbsp;&nbsp;</td>
+							<td style="font-size: 13px; width: 50%" class="perc"></td>
+						</tr>
+						<tr>
+							<td>Grade:&nbsp;&nbsp;</td>
+							<td style="font-size: 13px; width: 50%" class="grade"></td>
+						</tr>
+						<tr>
+							<td>Position:&nbsp;&nbsp;</td>
+							<td style="font-size: 13px; width: 50%">
+								<!-- <input type="text" name="position" class="form-control position" style="background:none;border: none;color:white;"> -->
+								<select name="position" class="form-control position" style="background:none;border: none;color:black;">
+									<option></option>
+									<option value="1st">1st</option>
+									<option value="2nd">2nd</option>
+									<option value="3rd">3rd</option>
+									<option value="4th">4th</option>
+									<option value="5th">5th</option>
+									<option value="6th">6th</option>
+									<option value="7th">7th</option>
+									<option value="8th">8th</option>
+									<option value="9th">9th</option>
+									<option value="10th">10th</option>
+								</select>
+
+							</td>
+						</tr>
+						<tr>
+							<td>Total Days:&nbsp;&nbsp;</td>
+							<td style="font-size: 13px; width: 50%">
+								<input type="text" name="tday" class="form-control tday" style="background:none;border: none;color:white;">
+							</td>
+						</tr>
+						<tr>
+							<td>Present Days:&nbsp;&nbsp;</td>
+							<td style="font-size: 13px;width: 50%">
+								<input type="text" name="pday" class="form-control pday" style="background:none;border: none;color:white;">
+							</td>
+						</tr>
+						<tr>
+							<td>Absent Days:&nbsp;&nbsp;</td>
+							<td style="font-size: 13px;width: 50%">
+								<input type="text" name="aday" class="form-control aday" style="background:none;border: none;color:white;">
+							</td>
+						</tr>
+						<tr>
+							<td>Attendance %:&nbsp;&nbsp;</td>
+							<td style="font-size: 13px;width: 50%">
+								<input type="text" name="aperc" class="form-control aperc" style="background:none;border: none;color:white;">
+							</td>
+						</tr>
+					</table><br><br>
+					<table class="m-auto text-right" style="font-weight: bold; width: 100%;">
+						<tr>
+							<td>Result:&nbsp;&nbsp;</td>
+							<td style="font-size: 13px;text-align: center;  border: solid 1px; width: 20%">
+								<select name="resu" class="form-control form-control-sm">
+									<option>--SELECT--</option>
+									<option value="Pass">Pass</option>
+									<option value="Fail">Fail</option>
+									<option value="P.Pass">P.Pass</option>
+								</select>
+							</td>
+							<td>Remarks:&nbsp;&nbsp;</td>
+							<td style="font-size: 13px;text-align: center; border: solid 1px; width: 20%">
+								<!-- <input type="text" name="all_rem" class="form-control form-control-sm" id="al_rem" required> -->
+								<select name="all_rem" class="form-control form-control-sm" id="al_rem" required>
+									<option>--SELECT--</option>
+									<option value="Excellent Result, Well Done,">Excellent Result, Well Done,</option>
+									<option value="Very , Well Done,">Very Good Result, Well Done,</option>
+									<option value="Good Result">Good Result</option>
+									<option value="More Efforts are Required">More Efforts are Required</option>
+								</select>
+							</td>
+						</tr>
+					</table><br><br><br><br>
+					<div class="row">
+						<div class="col-md-4 m-auto">
+							<input type="submit" name="submit" value="Submit" class="form-control form-control-sm Bg_Btn sbtn">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

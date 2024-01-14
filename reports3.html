@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title></title>
+    
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style type="text/css">
+    .Bg_Input_Box {
+    background-color: #298490;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 12px 12px 20px rgb(0 0 0 / 20%);
+    /* background-image: url(<?php echo base_url()?>assets/images/School Logo PNG.png); */
+    /* z-index: 333333; */
+}
+.Text_color {
+    color: #333547;
+}
+.pb-5, .py-5 {
+    padding-bottom: 3rem!important;
+}
+.pt-5, .py-5 {
+    padding-top: 3rem!important;
+}
+.pl-3, .px-3 {
+    padding-left: 1rem!important;
+}
+.pr-3, .px-3 {
+    padding-right: 1rem!important;
+}
+*, ::after, ::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+body {
+    margin: 0;
+    font-family: Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #858796;
+    text-align: left;
+    background-color: #fff;
+}
+    </style>
+</head>
+<body>
+
+  <div class="Bg_Input_Box Text_color pr-3 pl-3 pt-5 pb-5"> 
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-6"></div>
+  <div class="col-md-2"></div>
+</div>
+<br>
+  <div class="row" style=""> <!-- Row start -->
+    <div class="col-md-4">
+      <table class="table-responsive">
+        <tbody><tr style=" width:100%; height:5vh">
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+            <input type="hidden" class="currentdate" value="2022-10-06">
+          <td style="font-size:13px;" width="50%;">SID:</td>
+          <td>
+            <input type="number" name="S_ID" class="form-control form-control-sm  sid" id="sid" style="height: 28px;">
+            <input type="number" name="Student_Fee_Id" class="form-control form-control-sm  sfid" id="sfid" hidden="" style="height: 28px;">
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size:13px;" width="50%;">Class:</td>
+              <td>
+          <input type="text" name="class" class="form-control form-control-sm cl" style="height: 28px;">
+        </td>
+        </tr>
+        <tr>
+          <td style="font-size:13px;">Challan Issue Date:</td>
+          <td><input type="date" name="Challan_Issue_Date" class="form-control form-control-sm cidate" style="height: 28px;"></td>
+        </tr>
+      </tbody></table>
+    </div>
+    <div class="col-md-4">
+      <table class="table-responsive">
+        <tbody><tr style=" width:100%; height:5vh">
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-size:13px;" width="50%;">Student's Name:</td>
+          <td><input type="text" name="Candidate_name" class="form-control form-control-sm Candidate_name ui-autocomplete-input" id="Candidate_name" style="height: 28px;" autocomplete="off"></td>
+        </tr>
+        <tr>
+          <td style="font-size:13px;" width="50%;">Section:</td>
+          <td>
+            <input type="text" name="Section" class="form-control form-control-sm sec">
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size:13px;">Challan Due Date:</td>
+          <td><input type="Date" name="Challan_Due_Date" class="form-control form-control-sm cddate" style="height: 28px; font-size: 12px;"></td>
+        </tr>
+</tbody></table>
+    </div>
+    <div class="col-md-4">
+      <table class="table-responsive">
+        <tbody><tr>
+          <td style="font-size:13px;" width="50%;">Session:</td>
+          <td>
+            <select class="form-control form-control-sm ses" name="ses_name" required="" style="height: 28px;">
+            <option>--SELECT--</option>
+                            <option value="2019-20">2019-20</option>
+                            <option value="2020-21">2020-21</option>
+                            <option value="2020-26">2020-26</option>
+                            <option value="2021-22">2021-22</option>
+                            <option value="2000-01">2000-01</option>
+                            <option value="2001-00">2001-00</option>
+                            <option value="2000-15">2000-15</option>
+                            <option value="2022-01">2022-01</option>
+                            <option value="2023-40">2023-40</option>
+                            <option value="2022-23">2022-23</option>
+                          </select></td>
+        </tr>
+        <tr>
+          <td style="font-size:13px;" width="50%;">Father's Name:</td>
+          <td><input type="text" name="father's_name" class="form-control form-control-sm  fname ui-autocomplete-input" id="fname" style="height: 28px;" autocomplete="off"></td>
+        </tr>
+        <tr>
+          <td style="font-size:13px;" width="50%;">Fee Month:</td>
+          <td>
+            <select class="form-control form-control-sm fmonth" name="Fee_Month" required="">
+            <option>--SELECT--</option>
+            <option value="January">January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select> </td>
+         <!-- <td><input type="text" name="Fee_month" class="form-control form-control-sm fmonth" style="height: 28px;"></td> -->
+        </tr>
+        <tr>
+          <td style="font-size:13px;">Payment Date:</td>
+          <td><input type="Date" name="Payment_Date" class="form-control form-control-sm cpdate" value="2022-10-06" style="height: 28px; font-size: 12px;" required=""></td>
+        </tr>
+      </tbody></table>
+    </div>
+  </div><hr><br>
+<div class="row">
+  <div class="col-md-3">
+  <table class="table-responsive">
+      <tbody><tr>
+        <td style="font-size:13px;">Admission Fee:</td>
+        <td><input type="number" name="Admfee" class="form-control form-control-sm Admfee ff" style="height: 28px;" disabled=""></td>
+      </tr>
+      <tr>
+        <td style="font-size:13px;">Tuition Fee:</td>
+        <td><input type="number" name="monthlutuifee" class="form-control form-control-sm monthlutuifee ff" style="height: 28px;" disabled=""></td>
+      </tr>
+      <tr>
+        <td style="font-size:13px;">Exam Fee:</td>
+        <td><input type="number" name="examfee" class="form-control form-control-sm examfee ff" style="height: 28px;" disabled=""></td>
+      </tr>
+      <tr>
+        <td style="font-size:13px;">Annaul Fee:</td>
+        <td><input type="number" name="annualfee" class="form-control form-control-sm annualfee ff" style="height: 28px;" disabled=""></td>
+      </tr>
+      <tr>
+        <td style="font-size:13px;">Card Fee:</td>
+        <td><input type="number" name="cardfee" class="form-control form-control-sm cardfee ff" style="height: 28px;" disabled=""></td>
+      </tr>
+      <tr>
+        <td style="font-size:13px;">Stationary Fee:</td>
+        <td><input type="number" name="stationaryfee" class="form-control form-control-sm stationaryfee ff" style="height: 28px;" disabled=""></td>
+      </tr>
+      <tr>
+        <td style="font-size:13px;">Security Fee:</td>
+        <td><input type="number" name="securityfee" class="form-control form-control-sm securityfee ff" style="height: 28px;" disabled=""></td>
+      </tr>
+      <tr>
+        <td style="font-size:13px;">Comp Fee:</td>
+        <td><input type="number" name="compfee" class="form-control form-control-sm compfee ff" style="height: 28px;" disabled=""></td>
+      </tr>
+      <tr>
+        <td style="font-size:13px;">Other Fee:</td>
+        <td><input type="number" name="otherfee" class="form-control form-control-sm otherfee ff" style="height: 28px;" disabled=""></td>
+      </tr>
+      <tr>
+        <td style="font-size:13px;">Late Fee:</td>
+        <td><input type="number" name="late_fee" class="form-control form-control-sm lfee ff" style="height: 28px;"></td>
+      </tr>
+            <tr>
+        <td style="font-size:13px;">SPORTS FEE</td>
+        <td><input type="number" name="SPORTS_FEE" class="form-control form-control-sm SPORTS_FEE  selected_head ff" style="height: 28px;"></td>
+      </tr>
+            <tr>
+        <td style="font-size:13px;">WADE ENGLAND</td>
+        <td><input type="number" name="WADE_ENGLAND" class="form-control form-control-sm WADE_ENGLAND  selected_head ff" style="height: 28px;"></td>
+      </tr>
+            <tr>
+        <td style="font-size:13px;">SPORTS</td>
+        <td><input type="number" name="SPORTS" class="form-control form-control-sm SPORTS  selected_head ff" style="height: 28px;"></td>
+      </tr>
+            <tr>
+        <td style="font-size:13px;">SPORTS FUND</td>
+        <td><input type="number" name="SPORTS_FUND" class="form-control form-control-sm SPORTS_FUND  selected_head ff" style="height: 28px;"></td>
+      </tr>
+            <tr>
+        <td style="font-size:13px;">AMMAD</td>
+        <td><input type="number" name="AMMAD" class="form-control form-control-sm AMMAD  selected_head ff" style="height: 28px;"></td>
+      </tr>
+            <tr>
+        <td style="font-size:13px;">FEES</td>
+        <td><input type="number" name="FEES" class="form-control form-control-sm FEES  selected_head ff" style="height: 28px;"></td>
+      </tr>
+            <tr>
+        <td style="font-size:13px;">ASS</td>
+        <td><input type="number" name="ASS" class="form-control form-control-sm ASS  selected_head ff" style="height: 28px;"></td>
+      </tr>
+            <tr>
+        <td style="font-size:13px;">Discount:</td>
+        <td><input type="number" name="Discount" class="form-control form-control-sm ds" style="height: 28px;"></td>
+      </tr>
+      <tr>
+        <td style="font-size:13px;">Arrears:</td>
+        <td><input type="number" name="Arrears" class="form-control form-control-sm ar ff" style="height: 28px;" readonly=""></td>
+      </tr>      
+    <tr>
+      <td style="font-size:13px;">Total Remaining Fee:</td>
+      <td><input type="number" name="Total_Remaining_Fee" class="form-control form-control-sm trf" id="trf" style="height: 28px;" readonly=""></td>
+    </tr>
+    </tbody></table>
+    </div>
+    <div class="col-md-9">
+
+<div style="height:312px; overflow:auto;">
+  <table class="table text-center text-white" style="border:1px solid black;color:#333547">
+    <tbody><tr ciass="p-5" style="border:1px solid black">
+      <!-- <th>Action</th> -->
+      <th>Fee Month</th>
+      <th>Paid Amount</th>
+     <!--  <th>Total Monthly Fees</th> -->
+      <th>Discount</th>
+      <!-- <th>Total Payables</th> -->
+     <!--  <th>Arrears</th> -->
+      <th>To be Paid</th>
+      <th>Paid Date</th>
+    </tr>
+    <tr>
+      <!-- <td class="sfi"></td> -->
+      <td class="fm1"><input type="text" class="form-control form-control-sm" value="September" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="January" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="September" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="October" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="January" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="January" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="January" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="January" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="January" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="October" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="October" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="January" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="January" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="January" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="--SELECT--" readonly="" style="background:none;border:none;color:white"></td>
+      <td class="pa1"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="15500" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="11000" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="5000" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="2000" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="2000" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="10000" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="3000" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="111111" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="11111" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"></td>
+      <!-- <td class="f1"></td> -->
+      <td class="d1"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="600" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"></td>
+      <!-- <td class="tp1"></td> -->
+    <!--   <td class="ar1"></td> -->
+      <td class="tbp"><input type="number" class="form-control form-control-sm" value="9400" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="5800" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="-300" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="1500" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="0" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="1500" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="6000" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="9800" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="6300" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="-200" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="10700" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="10700" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="-89981" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="-84962" readonly="" style="background:none;border:none;color:white"><input type="number" class="form-control form-control-sm" value="10700" readonly="" style="background:none;border:none;color:white"></td>
+      <td class="pd1"><input type="text" class="form-control form-control-sm" value="0000-00-00" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="0000-00-00" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="2021-08-04" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="0000-00-00" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="2021-08-04" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="2021-08-10" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="2021-08-10" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="2021-08-10" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="2021-08-10" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="2021-08-12" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="0000-00-00" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="0000-00-00" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="2022-09-17" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="2022-09-17" readonly="" style="background:none;border:none;color:white"><input type="text" class="form-control form-control-sm" value="0000-00-00" readonly="" style="background:none;border:none;color:white"></td>
+    </tr>
+  </tbody></table>
+</div>
+    </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+<table class="table-response">
+      <tbody><tr>
+        <td style="font-size:13px;">Total Fee:</td>
+        <td><input type="number" name="Total_Fee" class="form-control form-control-sm tf" style="height: 28px;" disabled=""></td>
+      </tr>
+  </tbody></table>
+  </div>
+  <div class="col-md-4">
+<table class="table-response">
+    <tbody><tr>
+      <td style="font-size:13px;">Paid By:</td>
+      <td>
+        <select class="form-control form-control-sm" name="Paid_by">
+        <!-- <option>--SELECT--</option> -->
+          <option>Cash Receipt</option>
+         <!--  <option>Bank Voucher</option> -->
+        </select>
+      </td>
+    </tr>
+  </tbody></table>
+  </div>
+  <div class="col-md-4">
+<input type="number" class="chlnid" name="chlnId" hidden=""><table class="table-response">
+      <tbody><tr><td style="font-size:13px;">Paid Amount:</td>
+      <td><input type="number" name="paid_amount" class="form-control form-control-sm pm" style="height: 28px;" required=""></td>
+    </tr>
+          
+  </tbody></table>
+  </div>
+  </div>   <!-- ROW END -->
+  <br>
+  <br>
+
+  <div class="row">
+        <div class="col-md-4 m-auto">
+          <input type="submit" value="Submit" name="Submit" class="form-control Bg_Btn">
+        </div>
+
+      </div>
+     </div>
+
+
+
+</body>
+</html>
+
+

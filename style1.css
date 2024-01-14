@@ -1,0 +1,19 @@
+.container{
+	margin-top: 8%;
+}
+.inner{
+	overflow: hidden;
+}
+.inner img{
+	transition: all 1.5s ease;
+}
+.inner:hover img{
+	transform: scale(1.5);
+}
+a{
+	color: gray;
+}
+.main-image{
+	width: 25rem;
+	height: 10rem;
+}
